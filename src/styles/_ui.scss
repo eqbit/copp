@@ -1,0 +1,24 @@
+.btn {
+  display: inline-block;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: .3s;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover:not(:focus):not(:active) {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px -3px rgba(208, 16, 27, 0.3)
+  }
+
+  &:focus, &:active {
+    transition: .05s;
+  }
+
+  &--tertiary {
+    background: linear-gradient( 90deg, rgb(214,0,0) 0%, rgb(144,0,0) 100%);
+    color: #ffffff;
+    border-radius: 5px;
+  }
+}

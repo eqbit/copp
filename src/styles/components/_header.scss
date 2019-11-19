@@ -1,0 +1,165 @@
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+  }
+
+  &-menu {
+    margin-left: 50px;
+    display: flex;
+
+    &__item {
+      font-size: 14px;
+      text-transform: uppercase;
+      white-space: nowrap;
+
+      & + & {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  &-search {
+    position: relative;
+    margin-left: 30px;
+    
+    &__icon {
+      cursor: pointer;
+    }
+
+    &-results {
+      overflow: hidden;
+      height: 100px;
+      background: #FFF;
+      position: absolute;
+      width: 100%;
+      padding: 20px;
+      top: calc(100% + 5px);
+      max-height: 0;
+      transition: .3s;
+      visibility: hidden;
+      opacity: 0;
+
+      &-item {
+        display: block;
+
+        & + & {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    &__form {
+      position: absolute;
+      right: 0;
+      top: -13px;
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s;
+
+      input[type="text"] {
+        width: 430px;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 13px 20px;
+        border: none;
+        border-radius: 2px;
+        box-shadow: 5px 5px 30px rgba(#778899, .3);
+      }
+
+      &--got-results {
+        .header-search-results {
+          max-height: 100px;
+          overflow: auto;
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    &__close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+
+      rect {
+        transition: .3s;
+      }
+
+      &:hover rect {
+        fill: $red;
+      }
+    }
+
+    &--open {
+      .header-search__form {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &-phone {
+    position: relative;
+    padding-right: 20px;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+      width: 6px;
+      height: 6px;
+      border: 1px solid #394959;
+      border-style: none solid solid none;
+      transform: rotate(45deg);
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: bold;
+      margin-left: 5px;
+    }
+
+    &__tooltip {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      border-radius: 5px;
+      right: 0;
+      top: 100%;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s;
+      background: #ffffff;
+
+      a + a {
+        margin-top: 20px;
+      }
+    }
+
+    &:hover {
+      .header-phone__tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__row--no-logo {
+    .header__logo {
+      visibility: hidden;
+    }
+  }
+}

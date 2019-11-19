@@ -5,11 +5,9 @@ import './styles/app.scss';
 
 function App() {
   return (
-    <div className="wrapper">
-      <Switch>
-        <Route to="/" exact component={FrontPage} />
-      </Switch>
-    </div>
+    <Switch>
+      <Route to="/" exact component={FrontPage} />
+    </Switch>
   );
 }
 

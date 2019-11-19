@@ -1,6 +1,13 @@
 html, body {
   margin: 0;
   height: 100%;
+  font-weight: 500;
+}
+
+*, *:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
 }
 
 h1, h2, h3,
@@ -48,7 +55,7 @@ textarea, input {
 }
 
 .container {
-  width: 1030px;
+  width: 1230px;
   max-width: 100%;
   padding-left: 15px;
   padding-right: 15px;
