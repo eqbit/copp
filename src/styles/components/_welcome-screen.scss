@@ -1,6 +1,33 @@
 .welcome-screen {
+  position: relative;
+  z-index: 1;
+
   &__wrapper {
     background: #e9ecf7;
+    padding: 110px 0 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 100px;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      background: #FFF;
+      clip-path: polygon(30% 100%, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    right: 50%;
+    transform: translateX(100%);
+    bottom: 0;
+    z-index: -1;
   }
 
   &__title {
@@ -13,18 +40,102 @@
     z-index: 1;
     color: #FFF;
 
-    &:after {
+    &:before {
       content: "";
       display: block;
       position: absolute;
-      width: 100%;
+      width: calc(100% + 25px);
       height: 100%;
       background: $red;
       transform: rotate(-5deg);
       border-radius: 25px;
       top: 0;
-      left: 0;
+      left: -25px;
       z-index: -1;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 85%;
+      height: 70%;
+      background: #c6cfd8;
+      transform: rotate(-13deg);
+      border-radius: 25px;
+      top: -40px;
+      left: 10px;
+      z-index: -2;
+    }
+  }
+
+  &__btn {
+    margin-top: 50px;
+    display: inline-flex;
+    align-items: center;
+
+    svg {
+      margin-left: 8px;
+      transform: translateY(2px);
+    }
+  }
+
+  &__logo {
+    position: relative;
+    transform: translateX(-140px);
+    z-index: -1;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      background: #394959;
+      width: 60vw;
+      height: 700px;
+      border-radius: 25px;
+      z-index: -1;
+      left: -50%;
+      transform: rotate(9deg);
+      top: -60px;
+    }
+  }
+
+  &-slider {
+    display: flex;
+    margin: 50px;
+    align-items: center;
+
+    &__item {
+      font-size: 18px;
+      padding: 15px 40px;
+      color: #778899;
+      background: rgba(255,255,255,.7);
+      text-align: center;
+      transition: .3s;
+      margin: 10px 0;
+      cursor: pointer;
+      font-weight: bold;
+
+      &:hover {
+        color: $red;
+      }
+
+      &:first-child {
+        border-radius: 10px 0 0 10px;
+      }
+
+      &:last-child {
+        border-radius: 0 10px 10px 0;
+      }
+
+      &--active:nth-child(n) {
+        color: $red;
+        padding: 25px 40px;
+        border-radius: 10px;
+        background: rgba(255,255,255,.98);
+        margin: 0;
+        box-shadow: 0px 7px 9.5px 0.5px rgba(0, 43, 86, 0.05);
+      }
     }
   }
 }

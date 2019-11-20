@@ -59,4 +59,29 @@ const getPhones = () => (
   ]
 );
 
-export {getMenuItems, getSearchResults, getPhones};
+const getWelcomeScreenSlides = () => (
+  [
+    {
+      name: 'Школьники',
+      text: 'Начни строить будущее сегодня',
+      img: '/images/welcome-screen-girl.jpg'
+    },
+    {
+      name: 'Студенты',
+      text: 'Начни строить будущее сегодня',
+      img: '/images/welcome-screen-girl.jpg'
+    },
+    {
+      name: 'Предпенсионеры',
+      text: 'Сделай шаг к профессиональному долголетию',
+      img: '/images/welcome-screen-girl.jpg'
+    },
+    {
+      name: 'Организации',
+      text: 'Прокачай свою команду',
+      img: '/images/welcome-screen-girl.jpg'
+    }
+  ]
+);
+
+export {getMenuItems, getSearchResults, getPhones, getWelcomeScreenSlides};
