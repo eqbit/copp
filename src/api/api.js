@@ -84,4 +84,79 @@ const getWelcomeScreenSlides = () => (
   ]
 );
 
-export {getMenuItems, getSearchResults, getPhones, getWelcomeScreenSlides};
+const getProgramList = () => ([
+  {
+    for: 'Студентам',
+    img: '/images/nail-designer.jpg',
+    name: 'Нейл-дизайнер',
+    place: 'Тюмень',
+    duration: '48 ч',
+    tag: false,
+    link: '/nail-designer'
+  },
+  {
+    for: 'Школьникам',
+    img: '/images/nail-designer.jpg',
+    name: 'Оператор коммерческой съемки',
+    place: 'Тюмень',
+    duration: '48 ч',
+    tag: 'СКОРО',
+    link: '/nail-designer'
+  },
+  {
+    for: 'Предпенсионерам',
+    img: '/images/nail-designer.jpg',
+    name: 'Нейл-дизайнер',
+    place: 'Ялуторовск',
+    duration: '48 ч',
+    tag: false,
+    link: '/nail-designer'
+  },
+  {
+    for: 'Организациям',
+    img: '/images/nail-designer.jpg',
+    name: 'Нейл-дизайнер',
+    place: 'Тюмень',
+    duration: '48 ч',
+    tag: false,
+    link: '/nail-designer'
+  },
+  {
+    for: 'Студентам',
+    img: '/images/nail-designer.jpg',
+    name: 'Нейл-дизайнер',
+    place: 'Тюмень',
+    duration: '48 ч',
+    tag: false,
+    link: '/nail-designer'
+  },
+  {
+    for: 'Студентам',
+    img: '/images/nail-designer.jpg',
+    name: 'Нейл-дизайнер',
+    place: 'Тюмень',
+    duration: '48 ч',
+    tag: false,
+    link: '/nail-designer'
+  },
+  {
+    for: 'Студентам',
+    img: '/images/nail-designer.jpg',
+    name: 'Нейл-дизайнер',
+    place: 'Тюмень',
+    duration: '48 ч',
+    tag: false,
+    link: '/nail-designer'
+  },
+  {
+    for: 'Студентам',
+    img: '/images/nail-designer.jpg',
+    name: 'Нейл-дизайнер',
+    place: 'Тюмень',
+    duration: '48 ч',
+    tag: false,
+    link: '/nail-designer'
+  },
+]);
+
+export {getMenuItems, getSearchResults, getPhones, getWelcomeScreenSlides, getProgramList};

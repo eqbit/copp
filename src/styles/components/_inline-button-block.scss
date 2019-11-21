@@ -1,0 +1,26 @@
+.inline-button-block {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.smile-block {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  cursor: pointer;
+  
+  &__sign {
+    color: #778899;
+    border-bottom: 2px dotted #778899;
+    margin-left: 10px;
+    transition: .3s;
+  }
+
+  &:hover {
+    .smile-block__sign {
+      color: $red;
+      border-color: $red;
+    }
+  }
+}
