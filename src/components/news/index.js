@@ -38,6 +38,7 @@ const News = props => (
   
         <a href="https://www.instagram.com/?hl=ru"
            target="_blank"
+           rel="noopener noreferrer"
            className="random-links-item">
           <div className="random-links-item__img">
             <img src="/images/extra-instagram.jpg" alt=""/>

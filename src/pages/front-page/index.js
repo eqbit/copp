@@ -9,6 +9,7 @@ import {VideoBlock} from '../../components/video-block';
 import {Carousel} from '../../components/carousel';
 import {Feedback} from '../../components/feedback';
 import {News} from '../../components/news';
+import {GotQuestionLarge} from '../../components/got-question-large';
 
 import {getCarouselSlides, getFeedbackSlides, getNews} from '../../api/api';
 
@@ -29,6 +30,7 @@ const FrontPage = props => (
       img: '/images/extra-link.jpg',
       link: '/master-class'
     }}/>
+    <GotQuestionLarge/>
   </div>
 );
 
