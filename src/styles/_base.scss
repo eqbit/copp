@@ -96,3 +96,44 @@ video {
     text-decoration: none;
   }
 }
+
+.random-links {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px -10px -10px;
+
+  &-item {
+    margin: 10px;
+    flex: 1 1 240px;
+    max-height: 108px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+
+    &__text {
+      flex: 1;
+      padding: 16px;
+      max-width: 340px;
+    }
+
+    &__title {
+      color: #394959;
+      transition: .3s;
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    &__sign {
+      font-size: 14px;
+      color: #778899;
+      margin-top: 5px;
+    }
+
+    &:hover {
+      .random-links-item__title {
+        color: $red;
+      }
+    }
+  }
+}

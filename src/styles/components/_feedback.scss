@@ -92,6 +92,10 @@
       height: 15px;
       position: relative;
       margin: auto;
+      background: transparent;
+      font-size: 0;
+      border: none;
+      outline: none;
 
       &:before {
         content: "";

@@ -8,8 +8,9 @@ import {About} from '../../components/about';
 import {VideoBlock} from '../../components/video-block';
 import {Carousel} from '../../components/carousel';
 import {Feedback} from '../../components/feedback';
+import {News} from '../../components/news';
 
-import {getSlides, getFeedbackSlides} from '../../api/api';
+import {getCarouselSlides, getFeedbackSlides, getNews} from '../../api/api';
 
 const FrontPage = props => (
   <div className="wrapper">
@@ -20,8 +21,14 @@ const FrontPage = props => (
     <GotQuestion/>
     <About/>
     <VideoBlock/>
-    <Carousel slides={getSlides()}/>
+    <Carousel slides={getCarouselSlides()}/>
     <Feedback slides={getFeedbackSlides()}/>
+    <News news={getNews()} extraLink={{
+      title: 'Мастер-класс по кулинарному искусству',
+      sign: 'Дата проведения: 20.05.2020',
+      img: '/images/extra-link.jpg',
+      link: '/master-class'
+    }}/>
   </div>
 );
 

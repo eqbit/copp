@@ -82,8 +82,8 @@ class Feedback extends React.Component {
         asNavFor: mainSlider,
         swipeToSlide: true,
         adaptiveHeight: false,
-        nextArrow: <div/>,
-        prevArrow: <div/>,
+        nextArrow: '',
+        prevArrow: '',
         verticalSwiping: true
       },
       {slides} = this.state;

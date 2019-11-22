@@ -159,7 +159,7 @@ const getProgramList = () => ([
   },
 ]);
 
-const getSlides = () => ([
+const getCarouselSlides = () => ([
   '/images/carousel-1.jpg',
   '/images/carousel-2.jpg',
   '/images/carousel-1.jpg',
@@ -212,4 +212,37 @@ const getFeedbackSlides = () => ([
   },
 ]);
 
-export {getMenuItems, getSearchResults, getPhones, getWelcomeScreenSlides, getProgramList, getSlides, getFeedbackSlides};
+const getNews = () => ([
+  {
+    date: '3 октября 2019',
+    title: 'Лицей и Вышка: что общего и чем отличаются',
+    text: 'На XIV Международный фестиваль школу современного искусства "Территория" Государственный молодежный театр Литвы привез lorem ipsum dolor sit amet',
+    img: '/images/news-item.png',
+    link: 'news/lorem'
+  },
+  {
+    date: '3 октября 2019',
+    title: 'Лицей и Вышка: что общего и чем отличаются',
+    text: 'На XIV Международный фестиваль школу современного искусства "Территория" Государственный молодежный театр Литвы привез lorem ipsum dolor sit amet',
+    img: '/images/news-item.png',
+    link: 'news/lorem'
+  },
+  {
+    date: '3 октября 2019',
+    title: 'В Москве наградили лауреатов конкурса “Семья и будущее России”',
+    text: 'Это проект Фонда Андрея Первозванного, который организован при поддержке Федерального фонда поддержки молодежи Тюменской области',
+    img: '/images/news-item.png',
+    link: 'news/lorem'
+  }
+]);
+
+export {
+  getMenuItems,
+  getSearchResults,
+  getPhones,
+  getWelcomeScreenSlides,
+  getProgramList,
+  getCarouselSlides,
+  getFeedbackSlides,
+  getNews
+};
