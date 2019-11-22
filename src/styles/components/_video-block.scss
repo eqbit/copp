@@ -1,0 +1,26 @@
+.video-block {
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+
+  &__text {
+    max-width: 440px;
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  &__description {
+    margin-top: 20px;
+    line-height: 24px;
+  }
+
+  &__video {
+    width: 540px;
+    height: 320px;
+    max-width: 100%;
+    margin-left: 100px;
+  }
+}

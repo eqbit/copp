@@ -1,0 +1,67 @@
+.carousel {
+  overflow: hidden;
+  margin-top: 50px;
+
+  &__wrapper {
+    position: relative;
+    margin-top: 70px;
+    z-index: 1;
+  }
+  
+  &__container {
+    position: relative;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 50px;
+    left: 35%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  .slick-list {
+    @include mq(1200px, min) {
+      padding-left: calc(((100vw - 1200px) / 2) - 50px);
+    }
+  }
+  
+  &__arrows {
+    position: absolute;
+    left: 615px;
+    top: 300px;
+    z-index: 2;
+  }
+  
+  &__arrow {
+    cursor: pointer;
+
+    path {
+      transition: .3s;
+    }
+
+    &--inactive {
+      cursor: default;
+      path {
+        fill: #c6cfd8;
+      }
+    }
+  }
+
+  &-item {
+    padding: 0 50px;
+    width: 600px;
+    height: 400px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

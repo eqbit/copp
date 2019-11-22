@@ -159,4 +159,21 @@ const getProgramList = () => ([
   },
 ]);
 
-export {getMenuItems, getSearchResults, getPhones, getWelcomeScreenSlides, getProgramList};
+const getSlides = () => ([
+  '/images/carousel-1.jpg',
+  '/images/carousel-2.jpg',
+  '/images/carousel-1.jpg',
+  '/images/carousel-2.jpg'
+]);
+
+const getFeedbackSlides = () => ([
+  {
+    type: 'photo',
+    img: '/images/girl.jpg',
+    thumb: '/images/girl-thumb.jpg',
+    text: 'Получила отличную практику на занятиях по «Маникюру и педикюру», преподаватель четко руководила моими действиями, вовремя поправляла. Отработка была на моделях и их было достаточно. Теоретические объяснения – более, чем понятны. Планирую трудиться в этой области. Спасибо всему коллективу центра.',
+    name: 'ольга s'
+  }
+]);
+
+export {getMenuItems, getSearchResults, getPhones, getWelcomeScreenSlides, getProgramList, getSlides};
