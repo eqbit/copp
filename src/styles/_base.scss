@@ -87,3 +87,12 @@ textarea, input {
 video {
   cursor: pointer;
 }
+
+.underline-link {
+  color: $red;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

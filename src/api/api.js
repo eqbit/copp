@@ -169,11 +169,47 @@ const getSlides = () => ([
 const getFeedbackSlides = () => ([
   {
     type: 'photo',
-    img: '/images/girl.jpg',
-    thumb: '/images/girl-thumb.jpg',
+    img: '/images/girl.png',
+    thumb: '/images/girl-thumb.png',
     text: 'Получила отличную практику на занятиях по «Маникюру и педикюру», преподаватель четко руководила моими действиями, вовремя поправляла. Отработка была на моделях и их было достаточно. Теоретические объяснения – более, чем понятны. Планирую трудиться в этой области. Спасибо всему коллективу центра.',
-    name: 'ольга s'
-  }
+    name: 'Ольга Модестова',
+    program: {
+      name: 'Нейл-дизайн',
+      link: '/nail-design'
+    }
+  },
+  {
+    type: 'video',
+    src: '/video/copp-ed.mp4',
+    thumb: '/images/girl-thumb.png',
+    name: 'Ольга Модестова',
+    program: {
+      name: 'Нейл-дизайн',
+      link: '/nail-design'
+    }
+  },
+  {
+    type: 'photo',
+    img: '/images/girl.png',
+    thumb: '/images/girl-thumb.png',
+    text: 'Получила отличную практику на занятиях по «Маникюру и педикюру», преподаватель четко руководила моими действиями, вовремя поправляла.',
+    name: 'Ольга Модестова',
+    program: {
+      name: 'Нейл-дизайн',
+      link: '/nail-design'
+    }
+  },
+  {
+    type: 'photo',
+    img: '/images/girl.png',
+    thumb: '/images/girl-thumb.png',
+    text: 'Получила отличную практику на занятиях по «Маникюру и педикюру», преподаватель четко руководила моими действиями, вовремя поправляла. Отработка была на моделях и их было достаточно. Теоретические объяснения – более, чем понятны. Планирую трудиться в этой области. Спасибо всему коллективу центра.Получила отличную практику на занятиях по «Маникюру и педикюру», преподаватель четко руководила моими действиями, вовремя поправляла. Отработка была на моделях и их было достаточно. Теоретические объяснения – более, чем понятны. Планирую трудиться в этой области. Спасибо всему коллективу центра.',
+    name: 'Ольга Модестова',
+    program: {
+      name: 'Нейл-дизайн',
+      link: '/nail-design'
+    }
+  },
 ]);
 
-export {getMenuItems, getSearchResults, getPhones, getWelcomeScreenSlides, getProgramList, getSlides};
+export {getMenuItems, getSearchResults, getPhones, getWelcomeScreenSlides, getProgramList, getSlides, getFeedbackSlides};

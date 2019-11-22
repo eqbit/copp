@@ -7,8 +7,9 @@ import {GotQuestion} from '../../components/got-question';
 import {About} from '../../components/about';
 import {VideoBlock} from '../../components/video-block';
 import {Carousel} from '../../components/carousel';
+import {Feedback} from '../../components/feedback';
 
-import {getSlides} from '../../api/api';
+import {getSlides, getFeedbackSlides} from '../../api/api';
 
 const FrontPage = props => (
   <div className="wrapper">
@@ -20,6 +21,7 @@ const FrontPage = props => (
     <About/>
     <VideoBlock/>
     <Carousel slides={getSlides()}/>
+    <Feedback slides={getFeedbackSlides()}/>
   </div>
 );
 

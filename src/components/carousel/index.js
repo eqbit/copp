@@ -37,6 +37,14 @@ class Carousel extends React.Component {
       arrows: false,
       beforeChange: (current, next) => this.setState({ currentSlideIndex: next }),
       focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 1000,
+          settings: {
+            slidesToShow: 2
+          }
+        }
+      ]
     };
     
     return (
