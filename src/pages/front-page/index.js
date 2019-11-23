@@ -18,7 +18,7 @@ import {getCarouselSlides, getFeedbackSlides, getNews} from '../../api/api';
 const FrontPage = props => (
   <>
     <div className="wrapper wrapper--front-page">
-      <Header noLogo={true}/>
+      <Header noLogo front/>
       <WelcomeScreen/>
       <ProgramList/>
       <InlineButtonBlock/>

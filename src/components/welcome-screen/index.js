@@ -9,7 +9,11 @@ class WelcomeScreen extends React.Component {
     this.state = {
       slides: getWelcomeScreenSlides(),
       currentSlide: 1,
-      interval: null
+      fade: false,
+      animationInterval: null,
+      fadeTimeout: null,
+      titleRef: null,
+      imgRef: null
     };
   }
   
@@ -23,34 +27,50 @@ class WelcomeScreen extends React.Component {
   
   setSlideshow = () => {
     this.setState({
-      interval: setInterval(() => {
+      animationInterval: setInterval(() => {
         this.setState(prevState => ({
           currentSlide: prevState.currentSlide + 1 === prevState.slides.length
             ? 0
-            : prevState.currentSlide + 1
+            : prevState.currentSlide + 1,
+          fade: true,
+          fadeTimeout: setTimeout(() => {
+            this.setState({
+              fade: false
+            })
+          }, 100)
         }));
       }, 4000)
     });
   };
   
   clearSlideshow = () => {
-    clearInterval(this.state.interval);
+    clearInterval(this.state.animationInterval);
+    clearTimeout(this.state.fadeTimeout)
   };
   
   handleSliderClick = currentSlide => {
-    this.setState({currentSlide});
+    this.setState({
+      currentSlide,
+      fade: true,
+      fadeTimeout: setTimeout(() => {
+        this.setState({
+          fade: false
+        });
+      }, 100)
+    });
+    
     this.clearSlideshow();
     this.setSlideshow();
   };
   
   render() {
-    const {slides, currentSlide} = this.state;
+    const {slides, currentSlide, fade} = this.state;
     
     return (
-      <div className="welcome-screen__wrapper">
+      <div className={`welcome-screen__wrapper ${fade ? 'fade' : ''}`}>
         
         <div className="welcome-screen__bg">
-          <img src={slides[currentSlide].img} alt=""/>
+          <img ref={img => this.imgRef = img} src={slides[currentSlide].img} alt=""/>
         </div>
         
         <div className="container">
@@ -59,8 +79,8 @@ class WelcomeScreen extends React.Component {
               <img src="/images/large-logo.png" alt=""/>
             </div>
           
-            <div className="welcome-screen__title">
-              Начни строить будущее сегодня
+            <div className="welcome-screen-title__wrapper">
+              <div className="welcome-screen-title" dangerouslySetInnerHTML={{__html: slides[currentSlide].text}}/>
             </div>
           
             <Button className="btn--secondary welcome-screen__btn">

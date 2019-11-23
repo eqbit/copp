@@ -5,6 +5,11 @@
   top: 0;
   z-index: 10;
   background: #e9ecf3;
+  transition: .3s;
+
+  &--front {
+    background: transparent;
+  }
 
   &__row {
     display: flex;

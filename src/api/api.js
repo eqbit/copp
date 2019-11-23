@@ -63,23 +63,23 @@ const getWelcomeScreenSlides = () => (
   [
     {
       name: 'Школьники',
-      text: 'Начни строить будущее сегодня',
+      text: 'Начни <br/>строить <br/>будущее <br/>сегодня',
       img: '/images/welcome-screen-girl.jpg'
     },
     {
       name: 'Студенты',
-      text: 'Начни строить будущее сегодня',
-      img: '/images/welcome-screen-girl.jpg'
+      text: 'Начни <br/>строить <br/>будущее <br/>сегодня',
+      img: '/images/welcome-screen-girl-1.png'
     },
     {
       name: 'Предпенсионеры',
-      text: 'Сделай шаг к профессиональному долголетию',
+      text: 'Сделай шаг к <br/>профессиональному <br/>долголетию',
       img: '/images/welcome-screen-girl.jpg'
     },
     {
       name: 'Организации',
-      text: 'Прокачай свою команду',
-      img: '/images/welcome-screen-girl.jpg'
+      text: 'Прокачай <br/>свою <br/>команду',
+      img: '/images/welcome-screen-girl-1.png'
     }
   ]
 );

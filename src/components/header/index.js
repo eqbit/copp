@@ -5,33 +5,60 @@ import {HeaderSearch} from '../header-search';
 import {HeaderPhones} from '../header-phones';
 import {Button} from '../button';
 
-const Header = props => (
-  <header className="header">
-    <div className="container">
-      <div className={props.noLogo ? 'header__row header__row--no-logo' : 'header__row'}>
-        <Link to="/" className="header__logo">
-          <img src="/images/logo.png" alt=""/>
-        </Link>
+class Header extends React.Component {
+  constructor(props){
+    super(props);
     
-        <div className="header-menu">
-      
-          {getMenuItems().map((item, index) => (
-            <Link to={item.link}
-                  className="header-menu__item"
-                  key={index}>{item.anchor}</Link>
-          ))}
+    this.state = {
+      scrollTop: document.body.scrollTop || document.documentElement.scrollTop
+    }
+  }
+  
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+  
+  handleScroll = e => {
+    this.setState({
+      scrollTop: document.body.scrollTop || document.documentElement.scrollTop
+    });
+  };
+  
+  render() {
+    const {props} = this;
+    return (
+      <header className={`header ${
+        props.front && this.state.scrollTop < 250
+          ? 'header--front'
+          : ''
+        }`}>
+        <div className="container">
+          <div className={props.noLogo ? 'header__row header__row--no-logo' : 'header__row'}>
+            <Link to="/" className="header__logo">
+              <img src="/images/logo.png" alt=""/>
+            </Link>
+        
+            <div className="header-menu">
+          
+              {getMenuItems().map((item, index) => (
+                <Link to={item.link}
+                      className="header-menu__item"
+                      key={index}>{item.anchor}</Link>
+              ))}
+            </div>
+        
+            <HeaderSearch/>
+        
+            <HeaderPhones/>
+        
+            <Button className="btn--tertiary header__btn" handleClick={() => {
+              console.log('button triggered');
+            }}>Оставить заявку</Button>
+          </div>
         </div>
-    
-        <HeaderSearch/>
-    
-        <HeaderPhones/>
-    
-        <Button className="btn--tertiary header__btn" handleClick={() => {
-          console.log('button triggered');
-        }}>Оставить заявку</Button>
-      </div>
-    </div>
-  </header>
-);
+      </header>
+    );
+  }
+}
 
 export {Header};
