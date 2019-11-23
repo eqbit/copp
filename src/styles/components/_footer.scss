@@ -1,0 +1,122 @@
+.footer {
+  padding: 50px 0;
+  background: #394959;
+  color: #c6cfd8;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-socials {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+
+    &__item {
+      & + & {
+        margin-left: 5px;
+      }
+
+      path {
+        transition: .3s;
+      }
+
+      &:hover {
+        path:first-child {
+          stroke: $red;
+        }
+
+        path:not(:first-child) {
+          fill: $red;
+        }
+      }
+    }
+  }
+
+  &__copy {
+    font-size: 14px;
+    margin-top: 40px;
+  }
+
+  &__middle {
+    display: flex;
+    margin: 0 100px;
+  }
+
+  &-menu {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      font-size: 16px;
+      padding: 10px 0;
+      border-bottom: 2px solid #778899;
+      width: 200px;
+    }
+  }
+
+  &-faq {
+    margin-left: 50px;
+
+    &__link {
+      font-size: 16px;
+      font-weight: bold;
+      border-bottom: 2px solid;
+    }
+
+    &__btn {
+      padding: 15px;
+      margin-top: 30px;
+      font-weight: bold;
+
+      path {
+        transition: .3s;
+      }
+
+      &:hover {
+        path {
+          fill: $red;
+        }
+      }
+    }
+  }
+
+  &-addresses {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: bold;
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+
+    &__item {
+      margin-top: 10px;
+
+      &--email {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__branch {
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 22px;
+    display: flex;
+    align-items: baseline;
+    text-decoration: underline;
+
+    svg {
+      margin-right: 5px;
+    }
+  }
+}

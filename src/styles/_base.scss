@@ -47,7 +47,14 @@ textarea, input {
 }
 
 .wrapper {
-  height: 100%;
+  min-height: 100%;
+
+  &--front-page {
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    margin-bottom: 400px;
+  }
 }
 
 .main {
