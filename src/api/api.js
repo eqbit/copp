@@ -86,77 +86,195 @@ const getWelcomeScreenSlides = () => (
 
 const getProgramList = () => ([
   {
-    for: 'Студентам',
+    forWhom: 'Студентам',
+    img: '/images/nail-designer.jpg',
+    name: 'Дизайнер хлебобулочных изделий',
+    place: 'Тюмень',
+    duration: '48 ч',
+    link: '/nail-designer',
+    date: '1.12.2019',
+    sphere: 'Сфера услуг'
+  },
+  {
+    forWhom: 'Школьникам',
     img: '/images/nail-designer.jpg',
     name: 'Нейл-дизайнер',
     place: 'Тюмень',
     duration: '48 ч',
-    tag: false,
-    link: '/nail-designer'
+    link: '/nail-designer',
+    date: '3.12.2019',
+    sphere: 'Сфера услуг'
   },
   {
-    for: 'Школьникам',
+    forWhom: 'Предпенсионерам',
+    img: '/images/nail-designer.jpg',
+    name: 'Юный повар',
+    place: 'Тюмень',
+    duration: '48 ч',
+    link: '/nail-designer',
+    date: '3.11.2019',
+    sphere: 'Сфера услуг'
+  },
+  {
+    forWhom: 'Организациям',
+    img: '/images/nail-designer.jpg',
+    name: 'Пиццмейкер',
+    place: 'Ялуторовск',
+    duration: '48 ч',
+    link: '/nail-designer',
+    date: '3.12.2018',
+    sphere: 'Сфера услуг'
+  },
+  {
+    forWhom: 'Школьникам',
+    img: '/images/nail-designer.jpg',
+    name: 'Дизайнер хлебобулочных изделий',
+    place: 'Тюмень',
+    duration: '48 ч',
+    link: '/nail-designer',
+    date: '3.12.2017',
+    sphere: 'Сфера услуг'
+  },
+  {
+    forWhom: 'Студентам',
+    img: '/images/nail-designer.jpg',
+    name: 'Оператор коммерческой съемки',
+    place: 'Тобольск',
+    duration: '56 ч',
+    link: '/nail-designer',
+    date: '3.9.2019',
+    sphere: 'Сфера услуг'
+  },
+  {
+    forWhom: 'Студентам',
+    img: '/images/nail-designer.jpg',
+    name: 'Дизайнер эко-пространства',
+    place: 'Тюмень',
+    duration: '48 ч',
+    link: '/nail-designer',
+    date: '3.12.2019',
+    sphere: 'Сфера услуг'
+  },
+  {
+    forWhom: 'Студентам',
+    img: '/images/nail-designer.jpg',
+    name: 'Пиццмейкер',
+    place: 'Тюмень',
+    duration: '48 ч',
+    link: '/nail-designer',
+    date: '3.12.2019',
+    sphere: 'Сфера услуг'
+  },
+  {
+    forWhom: 'Студентам',
+    img: '/images/nail-designer.jpg',
+    name: 'Нейл-дизайнер',
+    place: 'Тюмень',
+    duration: '48 ч',
+    link: '/nail-designer',
+    date: '3.12.2019',
+    sphere: 'Сфера услуг'
+  },
+  {
+    forWhom: 'Студентам',
+    img: '/images/nail-designer.jpg',
+    name: 'Нейл-дизайнер',
+    place: 'Тюмень',
+    duration: '48 ч',
+    link: '/nail-designer',
+    date: '3.12.2019',
+    sphere: 'Сфера услуг'
+  },
+  {
+    forWhom: 'Студентам',
+    img: '/images/nail-designer.jpg',
+    name: 'Дизайнер хлебобулочных изделий',
+    place: 'Тюмень',
+    duration: '48 ч',
+    link: '/nail-designer',
+    date: '3.12.2019',
+    sphere: 'Сфера услуг'
+  },
+  {
+    forWhom: 'Студентам',
+    img: '/images/nail-designer.jpg',
+    name: 'Юный повар',
+    place: 'Тюмень',
+    duration: '48 ч',
+    link: '/nail-designer',
+    date: '3.12.2019',
+    sphere: 'Сфера услуг'
+  },
+  {
+    forWhom: 'Студентам',
+    img: '/images/nail-designer.jpg',
+    name: 'Пиццмейкер',
+    place: 'Тюмень',
+    duration: '48 ч',
+    link: '/nail-designer',
+    date: '3.12.2012',
+    sphere: 'Сфера услуг'
+  },
+  {
+    forWhom: 'Студентам',
     img: '/images/nail-designer.jpg',
     name: 'Оператор коммерческой съемки',
     place: 'Тюмень',
     duration: '48 ч',
-    tag: 'СКОРО',
-    link: '/nail-designer'
+    link: '/nail-designer',
+    date: '3.12.2011',
+    sphere: 'Сфера услуг'
   },
   {
-    for: 'Предпенсионерам',
-    img: '/images/nail-designer.jpg',
-    name: 'Нейл-дизайнер',
-    place: 'Ялуторовск',
-    duration: '48 ч',
-    tag: false,
-    link: '/nail-designer'
-  },
-  {
-    for: 'Организациям',
+    forWhom: 'Студентам',
     img: '/images/nail-designer.jpg',
     name: 'Нейл-дизайнер',
     place: 'Тюмень',
     duration: '48 ч',
-    tag: false,
-    link: '/nail-designer'
+    link: '/nail-designer',
+    date: '3.12.2012',
+    sphere: 'Сфера услуг'
   },
   {
-    for: 'Студентам',
+    forWhom: 'Студентам',
+    img: '/images/nail-designer.jpg',
+    name: 'Пиццмейкер',
+    place: 'Тюмень',
+    duration: '48 ч',
+    link: '/nail-designer',
+    date: '3.12.2019',
+    sphere: 'Транспорт и логистика'
+  },
+  {
+    forWhom: 'Студентам',
     img: '/images/nail-designer.jpg',
     name: 'Нейл-дизайнер',
     place: 'Тюмень',
     duration: '48 ч',
-    tag: false,
-    link: '/nail-designer'
+    link: '/nail-designer',
+    date: '3.10.2019',
+    sphere: 'Производство и инженерные технологии'
   },
   {
-    for: 'Студентам',
+    forWhom: 'Студентам',
     img: '/images/nail-designer.jpg',
     name: 'Нейл-дизайнер',
     place: 'Тюмень',
     duration: '48 ч',
-    tag: false,
-    link: '/nail-designer'
+    link: '/nail-designer',
+    date: '3.12.2019',
+    sphere: 'Творчество и дизайн'
   },
   {
-    for: 'Студентам',
+    forWhom: 'Студентам',
     img: '/images/nail-designer.jpg',
-    name: 'Нейл-дизайнер',
+    name: 'Пиццмейкер',
     place: 'Тюмень',
     duration: '48 ч',
-    tag: false,
-    link: '/nail-designer'
-  },
-  {
-    for: 'Студентам',
-    img: '/images/nail-designer.jpg',
-    name: 'Нейл-дизайнер',
-    place: 'Тюмень',
-    duration: '48 ч',
-    tag: false,
-    link: '/nail-designer'
-  },
+    link: '/nail-designer',
+    date: '1.12.2019',
+    sphere: 'Информационные и коммуникационные технологии'
+  }
 ]);
 
 const getCarouselSlides = () => ([
@@ -236,6 +354,31 @@ const getNews = () => ([
   }
 ]);
 
+const getProgramFilterTitle = (place, forWhom, sphere)=> {
+  const getPlaceForm = place => {
+    switch(place) {
+      case 'Тюмень': return 'Тюмени';
+      default: return 'выбранном месте'
+    }
+  };
+  
+  const getForWhomForm = forWhom => {
+    switch(forWhom) {
+      case 'Студентам': return 'студентов';
+      default: return 'выбранного типа'
+    }
+  };
+  
+  const getSphereForm = sphere => {
+    switch(sphere) {
+      case 'Сфера услуг': return 'сфере услуг';
+      default: return 'выбранной сфере'
+    }
+  };
+  
+  return `Программы обучения для ${getForWhomForm(forWhom)} в ${getPlaceForm(place)} в ${getSphereForm(sphere)}`;
+};
+
 export {
   getMenuItems,
   getSearchResults,
@@ -244,5 +387,6 @@ export {
   getProgramList,
   getCarouselSlides,
   getFeedbackSlides,
-  getNews
+  getNews,
+  getProgramFilterTitle
 };

@@ -4,4 +4,9 @@ const trimText = (text, length, end = '') => {
     : `${text.substr(0, length)}${end}`;
 };
 
-export {trimText};
+const getSelectOption = item => ({
+  value: item,
+  label: item
+});
+
+export {trimText, getSelectOption};

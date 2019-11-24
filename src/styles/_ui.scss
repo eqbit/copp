@@ -82,3 +82,164 @@
     border-radius: 10px;
   }
 }
+
+.radio-row {
+  display: flex;
+  margin: 10px -10px -10px;
+}
+
+.button-radio {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+
+  input[type=radio] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+
+    + span {
+      display: block;
+      font-size: 14px;
+      padding: 12px;
+      border-radius: 5px;
+      background: #f1f1f1;
+      color: #000;
+      transition: .3s;
+    }
+
+    &:hover:not(:checked) + span {
+      color: $red;
+    }
+
+    &:checked + span {
+      background: $red;
+      color: #ffffff;
+    }
+  }
+}
+
+.crs {
+  &__single-value {
+    font-size: 14px !important;
+  }
+
+  &__menu {
+    padding: 20px 10px;
+  }
+
+  &__option {
+    background: #FFF !important;
+    color: #000 !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+
+    &:hover {
+      color: $red !important;
+    }
+  }
+
+  &__indicators {
+    position: relative;
+
+    svg {
+      display: none;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 8px solid #394959;
+      position: absolute;
+      transition: .3s;
+      right: 15px;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__indicator-separator {
+    display: none;
+  }
+
+
+
+  &__control {
+    border: none !important;
+    background: #f1f1f1 !important;
+    outline: none !important;
+    cursor: pointer !important;
+    box-shadow: none !important;
+    min-height: 40px !important;
+
+    &:hover {
+      .crs__single-value {
+        color: $red !important;
+      }
+    }
+
+    &--is-focused {
+      .crs__indicators:after {
+        transform: none;
+        border-bottom: 8px solid $red;
+      }
+    }
+  }
+}
+
+.crs-sort {
+  margin-left: 15px;
+
+  &__control {
+    font-size: 16px !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    min-height: unset !important;
+    cursor: pointer !important;
+  }
+
+  &__value-container {
+    flex: unset !important;
+    padding: 0 !important;
+    opacity: .7;
+    color: #778899 !important;
+  }
+
+  &__single-value {
+    max-width: unset !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    position: static !important;
+    transform: none !important;
+  }
+
+  &__menu {
+    padding: 10px;
+    width: max-content !important;
+  }
+
+  &__option {
+    background: #FFF !important;
+    color: #000 !important;
+    cursor: pointer !important;
+    width: max-content !important;
+
+    &:hover {
+      color: $red !important;
+    }
+  }
+
+  &__indicator-separator {
+    display: none;
+  }
+}

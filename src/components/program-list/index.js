@@ -26,7 +26,7 @@ class ProgramList extends React.Component {
             <div className="program-list">
               {programs.map((item, index) => (
                 <Link to={item.link} className="program-list-item" key={index}>
-                  <div className="program-list-item__for">{item.for}</div>
+                  <div className="program-list-item__for">{item.forWhom}</div>
                   
                   {item.tag && <div className="program-list-item__tag">{item.tag}</div>}
                   

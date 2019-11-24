@@ -51,8 +51,7 @@ class Header extends React.Component {
         
             <HeaderPhones/>
         
-            <Button className="btn--tertiary header__btn" handleClick={() => {
-              console.log('button triggered');
+            <Button className="btn--tertiary header__btn" onClick={() => {
             }}>Оставить заявку</Button>
           </div>
         </div>

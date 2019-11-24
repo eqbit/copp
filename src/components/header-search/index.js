@@ -64,7 +64,6 @@ class HeaderSearch extends React.Component {
             {
               this.state.results.length
                 ? this.state.results.map((item, index) => {
-                  console.log(item);
                   return (
                     <Link to={item.link}
                           className="header-search-results-item"
