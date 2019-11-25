@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {getProgramList} from '../../api/api';
 import {Scrollbars} from 'react-custom-scrollbars';
 
 class ProgramList extends React.Component {
@@ -10,14 +9,14 @@ class ProgramList extends React.Component {
     this.itemRef = [];
     
     this.state = {
-      programs: getProgramList(),
+      programs: this.props.programs,
       slideHeight: 455
     };
   }
   
   componentDidMount() {
     this.setState({
-      slideHeight: this.itemRef[0].clientHeight + 65
+      slideHeight: this.itemRef[0].clientHeight + 55
     })
   }
   

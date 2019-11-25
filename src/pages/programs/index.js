@@ -7,8 +7,13 @@ import {ProgramFilter} from '../../components/program-filter';
 const Programs = props => (
   <div className="wrapper">
     <Header/>
+    
     <ProgramFilter/>
+  
+    <div className="block-margin"/>
+    
     <GotQuestion/>
+    
     <Footer/>
   </div>
 );

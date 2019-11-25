@@ -1,0 +1,262 @@
+.program-detail {
+  &__top {
+    display: flex;
+    min-height: calc(100vh - 170px);
+  }
+
+  &__img {
+    width: 379px;
+    height: 379px;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+
+  &__info {
+    position: relative;
+    margin-left: 150px;
+    flex: 1;
+    max-width: 500px;
+  }
+
+  &__competence {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #778899;
+  }
+
+  &__duration {
+    position: absolute;
+    right: 0;
+    top: -33px;
+    width: 65px;
+    height: 65px;
+    background: $red;
+    border-radius: 50%;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+
+    i {
+      font-style: normal;
+      font-size: 18px;
+      transform: translateY(3px);
+    }
+  }
+
+  &__title {
+    font-size: 60px;
+    margin-top: 15px;
+    font-weight: 900;
+    line-height: 60px;
+  }
+
+  &__subtitle {
+    font-size: 26px;
+    margin-top: 30px;
+    font-weight: bold;
+  }
+
+  &__short-description {
+    margin-top: 30px;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 4px -3px -4px;
+
+      li {
+        margin: 2px 3px;
+        padding-left: 10px;
+        position: relative;
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 8px;
+          background: $red;
+          height: 5px;
+          width: 5px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &__detail-link {
+    margin-top: 15px;
+    border-bottom: 1px solid $red;
+    color: $red;
+    display: inline-block;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  &__price {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 35px;
+    position: relative;
+    
+    i {
+      font-style: normal;
+      color: $red;
+      font-size: 18px;
+      font-weight: normal;
+      transform: translateY(-15px);
+      display: inline-block;
+    }
+  }
+
+  &__order {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  &__wanna-free {
+    font-size: 16px;
+    color: $red;
+    border-bottom: 1px dashed $red;
+    cursor: pointer;
+    position: relative;
+    margin-left: 30px;
+    font-weight: bold;
+    transition: .3s;
+
+    &:hover {
+      border-color: transparent;
+    }
+
+    i {
+      position: absolute;
+      font-style: normal;
+      font-weight: normal;
+      display: block;
+      left: -10px;
+      top: 0;
+    }
+  }
+
+  &__return {
+    margin-top: 100px;
+    display: block;
+    color: #778899;
+    font-size: 16px;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  &-description {
+    margin-top: 150px;
+
+    &__text {
+      margin-top: 30px;
+      font-size: 20px;
+
+      p {
+        margin: 0;
+
+        &:not(:first-child) {
+          margin-top: 25px;
+        }
+      }
+
+      ul {
+        &:not(:first-child) {
+          margin-top: 25px;
+        }
+
+        li {
+          position: relative;
+          padding-left: 24px;
+          display: block;
+
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 8px;
+            background: $red;
+            height: 5px;
+            width: 5px;
+            border-radius: 50%;
+          }
+        }
+
+        li + li {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
+  &__program-file {
+    text-transform: uppercase;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 1px dashed $red;
+    transition: .3s;
+    color: $red;
+    margin-top: 30px;
+    font-weight: bold;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  &-doc {
+    display: flex;
+    align-items: center;
+    background: #e9ecf7;
+    padding: 30px 40px;
+    margin-top: 60px;
+    max-width: 666px;
+
+    &__text {
+      margin-left: 20px;
+    }
+
+    &__title {
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #778899;
+      font-weight: bold;
+    }
+
+    &__link {
+      display: block;
+      font-weight: bold;
+      line-height: 24px;
+      color: #394959;
+      margin-top: 10px;
+      border-bottom: 1px dashed #394959;
+      transition: .3s;
+
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+}

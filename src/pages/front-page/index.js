@@ -14,7 +14,7 @@ import {Footer} from '../../components/footer';
 import {FooterMap} from '../../components/footer-map';
 import {Link} from 'react-router-dom';
 
-import {getCarouselSlides, getFeedbackSlides, getNews} from '../../api/api';
+import {getCarouselSlides, getFeedbackSlides, getNews, getProgramList} from '../../api/api';
 
 const FrontPage = props => (
   <>
@@ -28,12 +28,11 @@ const FrontPage = props => (
         <div className="program-list__title">Программы</div>
       </div>
       
-      <div className="program-list__front-wrapper">
-        <ProgramList/>
+      <div className="program-list__default-wrapper">
+        <ProgramList programs={getProgramList()}/>
       </div>
       
       <InlineButtonBlock/>
-  
   
       <div className="block-margin"/>
       
@@ -54,7 +53,7 @@ const FrontPage = props => (
         </div>
       </div>
       
-      <div className="carousel__front-wrapper">
+      <div className="carousel__default-wrapper">
         <Carousel slides={getCarouselSlides()}/>
       </div>
   
@@ -68,7 +67,7 @@ const FrontPage = props => (
         </div>
       </div>
       
-      <div className="feedback__front-wrapper">
+      <div className="feedback__default-wrapper">
         <Feedback slides={getFeedbackSlides()}/>
       </div>
       

@@ -18,7 +18,13 @@
     overflow: hidden;
   }
 
-  &__front-wrapper {
+  &__detail-page-title {
+    color: #778899;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__default-wrapper {
     margin-top: 25px;
   }
 
