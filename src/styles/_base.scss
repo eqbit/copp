@@ -63,6 +63,15 @@ textarea, input {
       margin-top: 100px;
     }
   }
+
+  &--form-page {
+    margin-top: 102px;
+
+    @include mq(767px) {
+      margin-top: 58px;
+      overflow: hidden;
+    }
+  }
 }
 
 .main {

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const GotQuestionLarge = props => (
   <div className="got-question got-question--large">
@@ -14,8 +15,10 @@ const GotQuestionLarge = props => (
         ЦОПП для тех, кто с интересом смотрит в будущее и выбирает <br/>
         активную жизненную позицию
       </div>
-  
-      <div className="btn btn--secondary got-question__btn">ПОДАТЬ ЗАЯВКУ</div>
+      
+      <Link to="/schedule">
+        <div className="btn btn--secondary got-question__btn">ПОДАТЬ ЗАЯВКУ</div>
+      </Link>
     </div>
   </div>
 );

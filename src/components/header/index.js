@@ -6,7 +6,7 @@ import {HeaderPhones} from '../header-phones';
 import {Button} from '../button';
 
 class Header extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     
     this.state = {
@@ -14,15 +14,15 @@ class Header extends React.Component {
       mobileMenuVisible: false,
       menuItems: getMenuItems(),
       phones: getPhones()
-    }
+    };
   }
   
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('scroll', this.handleScroll);
   }
   
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('scroll', this.handleScroll);
   }
   
   handleScroll = e => {
@@ -32,7 +32,7 @@ class Header extends React.Component {
   };
   
   toggleMobileMenu = () => {
-    this.setState(prevState => ({mobileMenuVisible: !prevState.mobileMenuVisible}))
+    this.setState(prevState => ({mobileMenuVisible: !prevState.mobileMenuVisible}));
   };
   
   render() {
@@ -49,28 +49,30 @@ class Header extends React.Component {
               <Link to="/" className="header__logo">
                 <img src="/images/logo.png" alt=""/>
               </Link>
-        
+              
               <div className="header-menu">
-          
+                
                 {this.state.menuItems.map((item, index) => (
                   <Link to={item.link}
                         className="header-menu__item"
                         key={index}>{item.anchor}</Link>
                 ))}
               </div>
-        
+              
               <HeaderSearch/>
-        
+              
               <HeaderPhones/>
-        
-              <Button className="btn--tertiary header__btn" onClick={() => {
-              }}>Оставить заявку</Button>
-        
+              <Link to="/schedule">
+                <Button className="btn--tertiary header__btn">Оставить заявку</Button>
+              </Link>
+              
               <div className="header__mobile-menu-toggle" onClick={this.toggleMobileMenu}>
                 <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M0 14V11.999H22V14H0ZM0 6.00002H22V8.00002H0V6.00002ZM0 -0.000976562H22V2.00002H0V-0.000976562Z" fill="#394959"/>
+                  <path fillRule="evenodd" clipRule="evenodd"
+                        d="M0 14V11.999H22V14H0ZM0 6.00002H22V8.00002H0V6.00002ZM0 -0.000976562H22V2.00002H0V-0.000976562Z"
+                        fill="#394959"/>
                 </svg>
-          
+                
                 Меню
               </div>
             </div>
@@ -83,10 +85,12 @@ class Header extends React.Component {
           </div>
           <div className="mobile-menu__close" onClick={this.toggleMobileMenu}>
             <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fillRule="evenodd" clipRule="evenodd" d="M16.996 14.59L15.658 16.01L8.49999 9.33401L1.34199 16.01L0.00299072 14.59L7.06899 8.00001L0.00299072 1.40901L1.34199 -0.0109863L8.49999 6.66501L15.658 -0.0109863L16.996 1.40901L9.92999 8.00001L16.996 14.59Z" fill="#394959"/>
+              <path fillRule="evenodd" clipRule="evenodd"
+                    d="M16.996 14.59L15.658 16.01L8.49999 9.33401L1.34199 16.01L0.00299072 14.59L7.06899 8.00001L0.00299072 1.40901L1.34199 -0.0109863L8.49999 6.66501L15.658 -0.0109863L16.996 1.40901L9.92999 8.00001L16.996 14.59Z"
+                    fill="#394959"/>
             </svg>
           </div>
-  
+          
           <HeaderSearch mobile/>
           
           <div className="mobile-menu__list">
@@ -102,16 +106,19 @@ class Header extends React.Component {
               <img src="/images/place.png" alt=""/>
               <span>Тюмень</span>
             </div>
-  
+            
             <div className="mobile-menu-phones__list">
               {this.state.phones.map((item, index) => (
                 <a className="header-phone__link" href={`tel:${item}`} key={index}>{item}</a>
               ))}
             </div>
           </div>
-  
-          <Button className="btn--tertiary mobile-menu__btn" onClick={() => {
-          }}>Оставить заявку</Button>
+          
+          <Link to="/schedule">
+            <Button className="btn--tertiary mobile-menu__btn">
+              Оставить заявку
+            </Button>
+          </Link>
         </div>
       </>
     );
