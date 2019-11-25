@@ -28,7 +28,7 @@ const InlineButtonBlock = props => (
           <path d="M10.7143 10.7143H5.71429C5.28571 10.7143 5 10.4286 5 10.0001C5 9.57148 5.28571 9.28577 5.71429 9.28577H10.7143C11.1429 9.28577 11.4286 9.57148 11.4286 10.0001C11.4286 10.4286 11.1429 10.7143 10.7143 10.7143Z" fill="#1D1D1B"/>
         </svg>
         
-        <div className="smile-block__sign">Получи первую профессию бесплатно</div>
+        <div className="smile-block__sign" onClick={props.onClick}>Получи первую профессию бесплатно</div>
       </div>
     </div>
   </div>

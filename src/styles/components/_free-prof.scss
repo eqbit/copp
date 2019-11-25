@@ -1,0 +1,56 @@
+@import "../mixins";
+
+.free-prof {
+  max-width: 650px;
+
+  &__title {
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  &-tabs {
+    display: flex;
+    margin-top: 20px;
+
+    @include mq(767px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &-item {
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      color: #778899;
+      transition: .3s;
+      border-bottom: 3px solid transparent;
+
+      &.react-tabs__tab--selected {
+        color: $red;
+        border-color: $red;
+      }
+
+      & + & {
+        margin-left: 45px;
+
+        @include mq(767px) {
+          margin: 10px 0 0;
+        }
+      }
+    }
+  }
+
+  &__tab-panel {
+    margin-top: 25px;
+    line-height: 25px;
+
+    p {
+      margin-top: 20px;
+    }
+
+    i {
+      color: $red;
+      font-style: normal;
+    }
+  }
+}

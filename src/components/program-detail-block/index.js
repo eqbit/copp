@@ -51,7 +51,7 @@ class ProgramDetailBlock extends React.Component {
                   Записаться
                 </Button>
                 
-                <div className="program-detail__wanna-free">
+                <div className="program-detail__wanna-free" onClick={this.props.handlePopupAdd}>
                   <i>*</i>Хочу бесплатно
                 </div>
               </div>
