@@ -62,7 +62,7 @@
   margin-bottom: 5px;
 
   @include mq(1200px, min) {
-    left: calc((100vw - 1200px) / 2);
+    left: calc((100vw - 1215px) / 2);
   }
 }
 

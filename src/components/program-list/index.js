@@ -7,25 +7,34 @@ class ProgramList extends React.Component {
   constructor(props) {
     super(props);
     
+    this.itemRef = [];
+    
     this.state = {
-      programs: getProgramList()
+      programs: getProgramList(),
+      slideHeight: 455
     };
+  }
+  
+  componentDidMount() {
+    this.setState({
+      slideHeight: this.itemRef[0].clientHeight + 65
+    })
   }
   
   render() {
     const {programs} = this.state;
     return (
       <>
-        <div className="container">
-          <div className="program-list__title">Программы</div>
-        </div>
         <div className="program-list__wrapper">
-          <Scrollbars style={{height: 455}}
+          <Scrollbars style={{height: this.state.slideHeight}}
                       renderTrackHorizontal={props => <div {...props} className="track-horizontal"/>}
                       renderThumbHorizontal={props => <div {...props} className="thumb-horizontal"/>}>
             <div className="program-list">
               {programs.map((item, index) => (
-                <Link to={item.link} className="program-list-item" key={index}>
+                <Link to={item.link}
+                      ref={item => this.itemRef[index] = item}
+                      className="program-list-item"
+                      key={index}>
                   <div className="program-list-item__for">{item.forWhom}</div>
                   
                   {item.tag && <div className="program-list-item__tag">{item.tag}</div>}

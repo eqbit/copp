@@ -90,11 +90,7 @@ class Feedback extends React.Component {
     
     return (
       <div className="container feedback__wrapper">
-        <div className="feedback__title">Отзывы выпускников</div>
-        <div className="feedback__subtitle">
-          Мы гордимся нашими выпускниками, и они рады, что учились у нас. <br/>
-          Наши <Link to="/programs" className="underline-link">программы</Link> прошли уже более 1000 человек.
-        </div>
+        
         <div className="feedback">
           <Slider
             ref={slider => {
