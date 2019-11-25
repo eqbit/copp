@@ -66,13 +66,51 @@ class Footer extends React.Component {
   
   getTabletLayout = () => (
     <footer className="footer">
-      footerTablet
+      <div className="container">
+        <div className="footer__row footer__row--tablet">
+          <div className="footer__left">
+            <div className="footer__logo">
+              <img src="/images/large-logo.png" alt=""/>
+            </div>
+    
+            {this.socials()}
+    
+            <div className="footer__copy">© 2019 ЦОПП</div>
+          </div>
+  
+          <div className="footer__middle footer__middle--tablet">
+            {this.menu()}
+            {this.faq()}
+          </div>
+  
+          <div className="footer__right">
+            {this.addresses()}
+            {this.branch()}
+          </div>
+        </div>
+      </div>
     </footer>
   );
   
   getMobileLayout = () => (
     <footer className="footer">
-      footerMobile
+      <div className="container">
+        <div className="footer__mobile-row">
+          <div className="footer__logo">
+            <img src="/images/large-logo.png" alt=""/>
+          </div>
+  
+          {this.faq()}
+  
+          {this.addresses()}
+  
+          {this.branch()}
+  
+          {this.socials()}
+  
+          <div className="footer__copy">© 2019 ЦОПП</div>
+        </div>
+      </div>
     </footer>
   );
   

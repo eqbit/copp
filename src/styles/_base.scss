@@ -58,6 +58,10 @@ textarea, input {
 
   &--detail-page {
     margin-top: 170px;
+
+    @include mq(767px) {
+      margin-top: 100px;
+    }
   }
 }
 
@@ -83,6 +87,12 @@ textarea, input {
   border-bottom: 3px solid #d1d9e0;
   margin-top: 50px;
   position: relative;
+
+  @include mq(767px) {
+    font-size: 19px;
+    line-height: 26px;
+    padding: 40px 0;
+  }
 
   &:before {
     content: url("/images/quote.png");
@@ -112,6 +122,10 @@ video {
 
 .block-margin {
   margin-top: 70px;
+
+  @include mq(767px) {
+    margin-top: 40px;
+  }
 }
 
 .random-links {
@@ -172,4 +186,8 @@ video {
 .block-title {
   font-size: 36px;
   font-weight: bold;
+
+  @include mq(767px) {
+    font-size: 26px;
+  }
 }

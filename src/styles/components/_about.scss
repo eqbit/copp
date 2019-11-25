@@ -1,10 +1,12 @@
 .about {
-  margin-top: 70px;
-
   &__title {
     font-size: 52px;
     font-weight: bold;
     text-align: center;
+
+    @include mq(767px) {
+      font-size: 26px;
+    }
   }
 
   &-icons {
@@ -13,12 +15,22 @@
     &__row {
       display: flex;
       justify-content: space-around;
+
+      @include mq(767px) {
+        flex-direction: column;
+      }
     }
 
     &-item {
       text-align: center;
       transform: scale(0);
       transition: .3s;
+
+      @include mq(767px) {
+        & + & {
+          margin-top: 40px;
+        }
+      }
 
       &__img {
         width: 135px;

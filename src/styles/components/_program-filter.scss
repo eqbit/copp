@@ -1,8 +1,22 @@
+@import "../mixins";
+
 .program-filter {
   margin-top: 180px;
 
+  @include mq(1023px) {
+    margin-top: 140px;
+  }
+
+  @include mq(767px) {
+    margin-top: 100px;
+  }
+
   &__title {
     font-size: 60px;
+
+    @include mq(767px) {
+      font-size: 30px;
+    }
   }
 
   &__subtitle {
@@ -19,6 +33,14 @@
       .program-list-item {
         width: calc(100% / 3 - 20px);
         margin: 10px;
+
+        @include mq(1023px) {
+          width: calc(100% / 2 - 20px);
+        }
+
+        @include mq(767px) {
+          width: 100%;
+        }
       }
 
       .program-list-item-info {

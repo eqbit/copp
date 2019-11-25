@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .got-question {
   position: relative;
   z-index: 1;
@@ -7,6 +9,10 @@
   &--large {
     margin: 0;
     padding: 200px 0;
+
+    @include mq(767px) {
+      padding: 100px 0;
+    }
   }
 
   &__bg {
@@ -28,12 +34,20 @@
     color: #FFF;
     font-size: 48px;
     font-weight: bold;
+
+    @include mq(767px) {
+      font-size: 24px;
+    }
   }
 
   &__text {
     color: #e9ecf7;
     margin-top: 20px;
     font-size: 18px;
+
+    @include mq(767px) {
+      display: none;
+    }
   }
 
   &__btn {

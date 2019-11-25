@@ -1,7 +1,14 @@
+@import "../mixins";
+
 .inline-button-block {
   margin-top: 50px;
   display: flex;
   align-items: center;
+
+  @include mq(767px) {
+    margin: 0;
+    flex-direction: column;
+  }
 }
 
 .smile-block {
@@ -9,12 +16,29 @@
   align-items: center;
   margin-left: 40px;
   cursor: pointer;
+
+  @include mq(767px) {
+    margin: 30px 0 0;
+    font-size: 16px;
+    align-items: baseline;
+
+    svg {
+      transform: translateY(7px);
+    }
+  }
   
   &__sign {
     color: #778899;
     border-bottom: 2px dotted #778899;
     margin-left: 10px;
     transition: .3s;
+
+    @include mq(767px) {
+      border: none;
+      text-decoration: underline;
+      text-decoration-style: dashed;
+      flex: 1;
+    }
   }
 
   &:hover {

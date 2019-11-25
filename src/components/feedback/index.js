@@ -73,7 +73,15 @@ class Feedback extends React.Component {
         asNavFor: navSlider,
         adaptiveHeight: true,
         arrows: false,
-        verticalSwiping: true
+        verticalSwiping: true,
+        responsive: [
+          {
+            breakpoint: 700,
+            settings: {
+              verticalSwiping: false
+            }
+          }
+        ]
       },
       navSliderSettings = {
         slidesToShow: 3,
@@ -84,7 +92,16 @@ class Feedback extends React.Component {
         adaptiveHeight: false,
         nextArrow: '',
         prevArrow: '',
-        verticalSwiping: true
+        verticalSwiping: true,
+        responsive: [
+          {
+            breakpoint: 700,
+            settings: {
+              vertical: false,
+              verticalSwiping: false
+            }
+          }
+        ]
       },
       {slides} = this.state;
     

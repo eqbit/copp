@@ -20,6 +20,8 @@ class ProgramDetailBlock extends React.Component {
           <div className="program-detail__top">
             <div className="program-detail__img">
               <img src={data.img} alt=""/>
+  
+              <img src="/images/detail-page-img-bg.png" alt=""/>
             </div>
             
             <div className="program-detail__info">

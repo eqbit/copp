@@ -42,16 +42,24 @@ class HeaderSearch extends React.Component {
     }
   };
   
+  handleSubmit = e => {
+    if(window.clientWidth > 768) {
+      e.preventDefault();
+    }
+  };
+  
   render() {
     return (
-      <div className={this.state.isOpen ? 'header-search header-search--open' : 'header-search'} onBlur={this.closeSearch}>
+      <div className={this.state.isOpen || this.props.mobile ? 'header-search header-search--open' : 'header-search'}
+           onBlur={this.closeSearch}>
         <div className="header-search__icon" onClick={this.openSearch}>
           <img src="/images/search-icon.png" alt=""/>
         </div>
   
-        <form className={this.state.query.length >= 4 ? 'header-search__form header-search__form--got-results' : 'header-search__form'}
-              onSubmit={e => {e.preventDefault()}}>
+        <form action="/search" className={this.state.query.length >= 4 ? 'header-search__form header-search__form--got-results' : 'header-search__form'}
+              onSubmit={this.handleSubmit}>
           <input type="text"
+                 name="query"
                  placeholder="Поиск по сайту"
                  onChange={this.checkQuery}/>
           <div className="header-search__close" onClick={this.closeSearch}>

@@ -9,6 +9,10 @@
   text-decoration: none;
   font-weight: bold;
 
+  @include mq(767px) {
+    font-size: 12.5px;
+  }
+
   &:hover:not(:focus):not(:active) {
     transform: translateY(-2px);
     box-shadow: 0 5px 20px -5px rgba(208,16,27,0.5);
@@ -61,8 +65,13 @@
   left: 0;
   margin-bottom: 5px;
 
-  @include mq(1200px, min) {
+  @include mq(1201px, min) {
     left: calc((100vw - 1215px) / 2);
+  }
+
+  @include mq(1200px) {
+    left: 15px;
+    width: calc(100% - 30px);
   }
 }
 
@@ -85,13 +94,22 @@
 
 .radio-row {
   display: flex;
+  flex-wrap: wrap;
   margin: 10px -10px -10px;
+
+  @include mq(767px) {
+    margin: 15px -6px -6px;
+  }
 }
 
 .button-radio {
   position: relative;
   display: inline-block;
   margin: 10px;
+
+  @include mq(767px) {
+    margin: 6px;
+  }
 
   input[type=radio] {
     position: absolute;
@@ -112,6 +130,10 @@
       background: #f1f1f1;
       color: #000;
       transition: .3s;
+
+      @include mq(767px) {
+        padding: 5px 6px;
+      }
     }
 
     &:hover:not(:checked) + span {

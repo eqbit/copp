@@ -37,6 +37,8 @@ const FrontPage = props => (
       <div className="block-margin"/>
       
       <GotQuestion/>
+  
+      <div className="block-margin"/>
       
       <About/>
       

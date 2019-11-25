@@ -1,6 +1,9 @@
 import React from 'react';
 import {Button} from '../button';
 import {getWelcomeScreenSlides} from '../../api/api';
+import {Link} from 'react-router-dom';
+
+const sliderInterval = 4000;
 
 class WelcomeScreen extends React.Component {
   constructor(props) {
@@ -11,9 +14,7 @@ class WelcomeScreen extends React.Component {
       currentSlide: 1,
       fade: false,
       animationInterval: null,
-      fadeTimeout: null,
-      titleRef: null,
-      imgRef: null
+      fadeTimeout: null
     };
   }
   
@@ -39,7 +40,7 @@ class WelcomeScreen extends React.Component {
             })
           }, 100)
         }));
-      }, 4000)
+      }, sliderInterval)
     });
   };
   
@@ -83,21 +84,23 @@ class WelcomeScreen extends React.Component {
               <div className="welcome-screen-title" dangerouslySetInnerHTML={{__html: slides[currentSlide].text}}/>
             </div>
           
-            <Button className="btn--secondary welcome-screen__btn">
-              <>
-                Выбрать программу
-                <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clipPath="url(#clip0)">
-                    <path fillRule="evenodd" clipRule="evenodd" d="M41.005 8.38197L33.795 16.001L32.009 14.472L37.191 8.99597H-0.000976562V7.00497H37.176L31.985 1.52497L33.773 -0.00402832L40.991 7.61497L40.55 7.99197L41.005 8.38197Z" fill="white"/>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0">
-                      <rect width="41" height="16" fill="white"/>
-                    </clipPath>
-                  </defs>
-                </svg>
-              </>
-            </Button>
+            <Link to="/programs" className="welcome-screen__btn-container">
+              <Button className="btn--secondary welcome-screen__btn">
+                <>
+                  Выбрать программу
+                  <svg width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clipPath="url(#clip0)">
+                      <path fillRule="evenodd" clipRule="evenodd" d="M41.005 8.38197L33.795 16.001L32.009 14.472L37.191 8.99597H-0.000976562V7.00497H37.176L31.985 1.52497L33.773 -0.00402832L40.991 7.61497L40.55 7.99197L41.005 8.38197Z" fill="white"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0">
+                        <rect width="41" height="16" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </>
+              </Button>
+            </Link>
             
             <div className="welcome-screen-slider">
               {slides.map((item, index) => (

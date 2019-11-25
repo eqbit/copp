@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .header {
   position: fixed;
   width: 100%;
@@ -6,6 +8,10 @@
   z-index: 10;
   background: #e9ecf3;
   transition: .3s;
+
+  @include mq(1023px) {
+    background: #f8f9fd;
+  }
 
   &--front {
     background: transparent;
@@ -16,11 +22,37 @@
     justify-content: space-between;
     padding: 20px;
     align-items: center;
+
+    @include mq(1023px) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__logo {
+    transition: .3s;
+
+    @include mq(1023px) {
+      position: absolute;
+      left: 30px;
+      top: calc(50% - 24px);
+    }
+
+    @include mq(767px) {
+      top: 6px;
+    }
   }
 
   &-menu {
     margin-left: 50px;
     display: flex;
+
+    @include mq(1199px) {
+      margin-left: 15px;
+    }
+
+    @include mq(1023px) {
+      display: none;
+    }
 
     &__item {
       font-size: 14px;
@@ -30,12 +62,28 @@
       & + & {
         margin-left: 30px;
       }
+
+      @include mq(1199px) {
+        font-size: 12px;
+
+        & + & {
+          margin-left: 15px;
+        }
+      }
     }
   }
 
   &-search {
     position: relative;
     margin-left: 30px;
+
+    @include mq(1199px) {
+      margin-left: 0;
+    }
+
+    @include mq(1023px) {
+      display: none;
+    }
     
     &__icon {
       cursor: pointer;
@@ -118,6 +166,10 @@
     position: relative;
     padding-right: 20px;
 
+    @include mq(1023px) {
+      display: none;
+    }
+
     &:after {
       content: "";
       display: block;
@@ -167,6 +219,36 @@
   &__row--no-logo {
     .header__logo {
       visibility: hidden;
+      opacity: 0;
     }
   }
+
+  &__btn {
+    @include mq(767px) {
+      display: none;
+    }
+  }
+
+  &__mobile-menu-toggle {
+    color: #394959;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    cursor: pointer;
+
+    svg {
+      margin-right: 10px;
+    }
+
+    @include mq(1024px, min) {
+      display: none;
+    }
+  }
+}
+
+.header:not(.header--front) .header__row--no-logo .header__logo {
+  visibility: visible;
+  opacity: 1;
 }

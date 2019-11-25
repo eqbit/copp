@@ -30,6 +30,10 @@
     border-bottom: 1px solid $red;
     font-weight: bold;
 
+    @include mq(767px) {
+      display: none;
+    }
+
     &:hover {
       border-color: transparent;
     }

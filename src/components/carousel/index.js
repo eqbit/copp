@@ -5,12 +5,35 @@ import 'slick-carousel/slick/slick.css';
 class Carousel extends React.Component {
   constructor(props) {
     super(props);
+  
+    const {slides} = this.props;
+    
+    if(window.innerWidth >= 768) {
+      slides.push('');
+    }
     
     this.state = {
-      slides: this.props.slides,
+      slides,
       currentSlideIndex: 0
     };
   }
+  
+  componentDidMount() {
+    window.addEventListener('resize', this.handleWindowResize)
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowResize)
+  }
+  
+  handleWindowResize = () => {
+    if(window.innerWidth >= 768) {
+      const {slides} = this.props;
+      slides.push('');
+      
+      this.setState({slides})
+    }
+  };
   
   handleClickNext = () => {
     const {slides, currentSlideIndex} = this.state;
@@ -39,9 +62,21 @@ class Carousel extends React.Component {
       focusOnSelect: true,
       responsive: [
         {
+          breakpoint: 1700,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
           breakpoint: 1000,
           settings: {
             slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 700,
+          settings: {
+            slidesToShow: 1
           }
         }
       ]
@@ -88,7 +123,6 @@ class Carousel extends React.Component {
                 <img src={item} alt=""/>
               </div>
             ))}
-            <div className="carousel-item" key={slides.length}/>
           </Slider>
         </div>
       </div>
