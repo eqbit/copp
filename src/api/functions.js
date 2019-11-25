@@ -9,6 +9,6 @@ const getSelectOption = item => ({
   label: item
 });
 
-const scrollToElement = ref => window.scrollTo(0, ref.current.offsetTop);
+const scrollToElement = ref => window.scrollTo(0, ref.current.offsetTop - 100);
 
 export {trimText, getSelectOption, scrollToElement};

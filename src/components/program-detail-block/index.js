@@ -1,10 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {Button} from '../button';
+import {scrollToElement} from '../../api/functions';
 
 class ProgramDetailBlock extends React.Component {
   constructor(props) {
     super(props);
+  
+    this.descriptionBlock = React.createRef()
     
     this.state = {
       data: this.props.initialState
@@ -39,7 +42,7 @@ class ProgramDetailBlock extends React.Component {
                 <span dangerouslySetInnerHTML={{__html: data.shortDescription}}/>
               </div>
   
-              <div className="program-detail__detail-link">подробнее</div>
+              <div className="program-detail__detail-link" onClick={() => scrollToElement(this.descriptionBlock)}>подробнее</div>
               
               <div className="program-detail__price">{data.price}<i>*</i></div>
               
@@ -64,7 +67,7 @@ class ProgramDetailBlock extends React.Component {
           </div>
           
           <div className="program-detail-description">
-            <div className="block-title">Описание программы</div>
+            <div className="block-title" ref={this.descriptionBlock}>Описание программы</div>
             
             <div className="program-detail-description__text" dangerouslySetInnerHTML={{__html:data.description}}/>
           </div>
