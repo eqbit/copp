@@ -64,7 +64,7 @@ textarea, input {
     }
   }
 
-  &--form-page {
+  &--form-page, &--policy {
     margin-top: 102px;
 
     @include mq(767px) {
@@ -199,4 +199,8 @@ video {
   @include mq(767px) {
     font-size: 26px;
   }
+}
+
+.policy {
+  padding: 40px 0;
 }
